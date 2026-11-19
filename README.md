@@ -10,6 +10,25 @@
 - **Запись** — пошаговый wizard (демо без бэкенда).
 - **Премиум-слой** — `premium.css`, аккуратная типографика (Cormorant + Manrope).
 
+## Анимации и микро-интеракции
+
+Всё на **CSS + vanilla JS**, без тяжёлых библиотек. Есть учёт **`prefers-reduced-motion`** — блеск и бесконечные циклы отключаются, остаётся статичный контент.
+
+| Эффект | Где | Как работает |
+|--------|-----|----------------|
+| **Reveal при скролле** | Блоки с классом `.reveal` на всех страницах | `IntersectionObserver` в `js/site.js` → плавное появление снизу (`opacity` + `translateY`), задержки `data-delay="1…3"` |
+| **Параллакс hero** | Главная, коллаж фото | `js/home.js` — смещение слоёв за курсором через `requestAnimationFrame`, глубина в `data-depth` |
+| **Shine на логотипе** | Заголовок PLATINA на главной | CSS-градиент по тексту, ключ `platina-shine` (`home.css`) |
+| **Липкая шапка** | Везде | При прокрутке — `header.is-scrolled`: фон, тень, граница |
+| **Кнопка «запись» в hero** | Круг `.hero-orbit` | Пульсация `orbit-pulse`, hover scale |
+| **Карточки и ссылки** | Услуги, акции, команда | Hover: `translateY`, тень, смена цвета рамки |
+| **Выпадающее «Услуги»** | Шапка | Плавное открытие панели; на десктопе — hover + задержка закрытия (`site.js`) |
+| **Мастер записи** | `contact.html` | Смена шагов с анимацией `booking-in` (`premium.css`) |
+| **Лояльность** | `loyalty.html` | Декоративные «блобы» — float / pulse |
+| **Фото в премиум-блоках** | `premium.css` | `.img-reveal` — лёгкий zoom при наведении |
+
+Файлы: `js/site.js`, `js/home.js`, `styles.css` (`.reveal`), `home.css`, `premium.css`.
+
 ## Стек
 
 HTML · CSS (`styles`, `home`, `persona.css`, `premium`, `subpages`) · vanilla JS · Express для статики.
