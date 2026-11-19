@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цены — PLATINA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="persona.css">
+  <link rel="stylesheet" href="premium.css">
+</head>
+<body class="page-sub">
+  <header class="header is-scrolled">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="service-cutting.html">Стрижка</a>
+            <a role="menuitem" href="service-coloring.html">Окрашивание</a>
+            <a role="menuitem" href="service-makeup.html">Макияж</a>
+            <a role="menuitem" href="service-nails.html">Nail-сервис</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="content-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Прайс</p>
+        <h1 class="persona-page-title">Цены <span class="accent">студии</span></h1>
+        <p class="page-hero-lead">Ориентир по категориям мастер / стилист / топ. Точная стоимость — после консультации.</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container prices-table-wrap reveal">
+        <table class="svc-price-table">
+          <thead><tr><th>Услуга</th><th>от</th><th>Подробнее</th></tr></thead>
+          <tbody>
+            <tr><td>Женская стрижка + укладка</td><td>3 200 ₽</td><td><a href="service-cutting.html">Меню</a></td></tr>
+            <tr><td>Окрашивание в один тон</td><td>6 500 ₽</td><td><a href="service-coloring.html">Меню</a></td></tr>
+            <tr><td>Сложное окрашивание</td><td>12 500 ₽</td><td><a href="service-coloring.html">Меню</a></td></tr>
+            <tr><td>Укладка / брашинг</td><td>2 400 ₽</td><td><a href="service-styling.html">Меню</a></td></tr>
+            <tr><td>Уход Kérastase</td><td>3 500 ₽</td><td><a href="service-hair-care.html">Меню</a></td></tr>
+            <tr><td>Маникюр + покрытие</td><td>2 800 ₽</td><td><a href="service-nails.html">Меню</a></td></tr>
+            <tr><td>Дневной макияж</td><td>3 200 ₽</td><td><a href="service-makeup.html">Меню</a></td></tr>
+            <tr><td>Моментальный загар</td><td>2 800 ₽</td><td><a href="service-instant-tan.html">Меню</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container reveal" style="margin-top:2rem;text-align:center">
+        <a href="contact.html" class="btn btn-primary btn-lg">Записаться</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-premium"><div class="container"><div class="footer-premium__bottom"><p>© <span id="year"></span> PLATINA</p></div></div></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

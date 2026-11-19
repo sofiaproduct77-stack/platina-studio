@@ -1,0 +1,747 @@
+/* Persona-style layouts: акции, портфолио, команда, сертификаты, услуги */
+
+/* ——— Stock / акции ——— */
+.persona-page-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.stock-featured {
+  padding: calc(var(--header-h) + 1.5rem) 0 0;
+  background: var(--bg-muted);
+}
+
+.stock-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  display: grid;
+  align-items: end;
+  background: linear-gradient(120deg, #2a3d52 0%, #5ba3d9 55%, #e891b0 100%);
+  color: #fff;
+}
+
+.stock-banner__inner {
+  padding: 2.5rem 2.75rem;
+  max-width: 34rem;
+}
+
+.stock-banner__tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.stock-banner__title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.5vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.stock-banner__discount {
+  margin: 1rem 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+.stock-intro {
+  margin: 2.5rem 0 0;
+  max-width: 40rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem;
+  margin-top: 2rem;
+}
+
+.stock-card {
+  padding: 1.75rem 1.65rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 220px;
+}
+
+.stock-card__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.stock-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.stock-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.stock-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.stock-price strong {
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+.stock-price s {
+  color: var(--silver);
+  font-size: 1rem;
+}
+
+.stock-callback {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--blue-soft), #fff 50%, var(--pink-soft));
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.stock-callback h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.65rem;
+}
+
+.stock-callback p {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+}
+
+/* ——— Portfolio ——— */
+.portfolio-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.portfolio-filter {
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.portfolio-filter.is-active,
+.portfolio-filter:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.portfolio-masonry {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.85rem;
+}
+
+.portfolio-masonry figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.portfolio-masonry img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 3 / 4;
+  transition: transform 0.5s var(--ease);
+}
+
+.portfolio-masonry figure:hover img {
+  transform: scale(1.04);
+}
+
+.portfolio-masonry .pf-span-4 { grid-column: span 4; }
+.portfolio-masonry .pf-span-6 { grid-column: span 6; }
+.portfolio-masonry .pf-span-8 { grid-column: span 8; }
+.portfolio-masonry .pf-tall img { aspect-ratio: 2 / 3; }
+
+.portfolio-masonry figure.is-hidden {
+  display: none;
+}
+
+/* ——— Team (Persona) ——— */
+.team-persona {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.team-persona-card {
+  display: grid;
+  grid-template-columns: min(280px, 38vw) 1fr;
+  gap: 2rem;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  align-items: start;
+}
+
+.team-persona-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.team-persona-card h2 {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+.team-persona-card .team-tier {
+  margin: 0.35rem 0 0;
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.team-persona-card .team-exp {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.88rem;
+  color: var(--silver);
+}
+
+.team-persona-card .team-bio {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.team-persona-card .btn {
+  margin-top: 1.25rem;
+}
+
+/* Стилисты — круглые аватарки (как у Persona) */
+.stylist-section {
+  margin-bottom: 3rem;
+}
+
+.stylist-section__title {
+  margin: 0 0 1.35rem;
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+.stylist-avatars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stylist-avatar-card {
+  width: 7.5rem;
+  text-align: center;
+}
+
+.stylist-avatar-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s var(--ease);
+}
+
+.stylist-avatar-card a:hover {
+  transform: translateY(-3px);
+}
+
+.stylist-avatar-card a:hover .stylist-avatar {
+  border-color: var(--pink);
+  box-shadow: 0 10px 28px rgba(232, 145, 176, 0.25);
+}
+
+.stylist-avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--line);
+  background: var(--bg-card);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.stylist-avatar__name {
+  display: block;
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.stylist-avatar__role {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+@media (min-width: 900px) {
+  .stylist-avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .stylist-avatar-card {
+    width: 8rem;
+  }
+}
+
+.page-home .stylist-avatars {
+  justify-content: center;
+}
+
+.page-home #team .stylist-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.page-home #team .stylist-section__title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
+
+/* ——— Certificates ——— */
+.cert-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.cert-nominals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cert-nominal {
+  padding: 1.35rem 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: var(--bg-card);
+  border-color: var(--line);
+  cursor: default;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.cert-nominal:hover {
+  border-color: var(--pink);
+  box-shadow: 0 12px 32px rgba(232, 145, 176, 0.15);
+}
+
+.cert-nominal strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+.cert-nominal span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cert-perks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cert-perk {
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.cert-perk strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+/* ——— Services hub ——— */
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 520px;
+  margin-top: 2rem;
+}
+
+.services-menu a {
+  display: block;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.25s, padding-left 0.25s;
+}
+
+.services-menu a:hover {
+  color: var(--blue);
+  padding-left: 0.5rem;
+}
+
+/* ——— Service detail (cutting, etc.) ——— */
+.svc-hero {
+  padding: calc(var(--header-h) + 2rem) 0 2.5rem;
+  background: linear-gradient(165deg, #e8eef5 0%, #f0f6fc 55%, #fce8f0 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.svc-hero h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+}
+
+.svc-hero-lead {
+  margin: 1rem 0 0;
+  max-width: 28rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.svc-hero-visual img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.svc-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.svc-benefit {
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.svc-price-block h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+}
+
+.svc-price-note {
+  margin: 0 0 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.svc-price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.svc-price-table th,
+.svc-price-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-price-table th {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--silver);
+  font-weight: 600;
+}
+
+.svc-price-table td:last-child {
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+.svc-price-table tr:hover td {
+  background: var(--bg-elevated);
+}
+
+.svc-strip-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.svc-works {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.svc-works--nails {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 960px) {
+  .svc-works--nails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .svc-works--nails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.svc-works--makeup {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 960px) {
+  .svc-works--makeup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.svc-works img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.svc-team-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.svc-team-row.svc-team-avatars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2.25rem;
+}
+
+.svc-team-mini {
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.svc-team-row.svc-team-avatars .svc-team-mini {
+  width: 7.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s var(--ease);
+}
+
+.svc-team-mini:hover {
+  border-color: var(--blue);
+  transform: translateY(-2px);
+}
+
+.svc-team-row.svc-team-avatars .svc-team-mini:hover {
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.svc-team-row.svc-team-avatars .svc-team-mini:hover .stylist-avatar {
+  border-color: var(--pink);
+  box-shadow: 0 10px 28px rgba(232, 145, 176, 0.25);
+}
+
+.svc-team-mini img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.65rem;
+}
+
+.svc-team-mini .stylist-avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--line);
+  background: var(--bg-card);
+  margin-bottom: 0;
+  aspect-ratio: 1;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+@media (min-width: 900px) {
+  .svc-team-mini .stylist-avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+.svc-team-mini strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.svc-team-row.svc-team-avatars .svc-team-mini strong {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.svc-team-mini span {
+  font-size: 0.8rem;
+  color: var(--pink);
+  font-weight: 600;
+}
+
+.svc-team-row.svc-team-avatars .svc-team-mini span {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+}
+
+.svc-salon-teaser {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #2a3d52, #5ba3d9);
+  color: #fff;
+}
+
+.svc-salon-teaser p {
+  margin: 0.75rem 0 0;
+  opacity: 0.9;
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.svc-salon-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.svc-salon-stats li {
+  list-style: none;
+}
+
+.svc-salon-stats strong {
+  display: block;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 960px) {
+  .stock-grid,
+  .cert-hero-split,
+  .cert-perks,
+  .svc-hero-grid,
+  .svc-benefits,
+  .svc-works,
+  .svc-team-row,
+  .team-persona-card {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-masonry .pf-span-4,
+  .portfolio-masonry .pf-span-6,
+  .portfolio-masonry .pf-span-8 {
+    grid-column: span 6;
+  }
+
+  .cert-nominals {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-masonry .pf-span-4,
+  .portfolio-masonry .pf-span-6,
+  .portfolio-masonry .pf-span-8 {
+    grid-column: span 12;
+  }
+}

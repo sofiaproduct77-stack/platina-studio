@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PLATINA — премиальная студия красоты в Москве.">
+  <title>PLATINA — студия красоты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="persona.css">
+  <link rel="stylesheet" href="premium.css">
+</head>
+<body class="page-home">
+  <header class="header" id="top">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="service-cutting.html">Стрижка волос</a>
+            <a role="menuitem" href="service-coloring.html">Окрашивание волос</a>
+            <a role="menuitem" href="service-styling.html">Укладка волос</a>
+            <a role="menuitem" href="service-hair-care.html">Уход за волосами</a>
+            <a role="menuitem" href="service-nails.html">Маникюр и педикюр</a>
+            <a role="menuitem" href="service-makeup.html">Макияж, брови и ресницы</a>
+            <a role="menuitem" href="service-instant-tan.html">Моментальный загар</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Beauty studio · Москва</p>
+          <h1 class="hero-title">
+            <span class="hero-title-main hero-title-shine">PLATINA</span>
+            <span class="hero-title-sub">студия красоты</span>
+          </h1>
+          <p class="hero-lead">Скидка <strong>−15%</strong> новым гостям на первый визит к любому специалисту при записи онлайн.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Записаться</a>
+            <a href="#offers" class="btn btn-ghost">Смотреть акции</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-delay="1">
+          <a href="contact.html" class="hero-orbit" aria-label="Записаться"><span>запись</span></a>
+          <div class="hero-collage">
+            <img class="hero-img hero-img-main" src="assets/img/hero-main.jpg?v=9" srcset="assets/img/hero-main.jpg?v=9 1332w" sizes="(min-width: 1100px) 420px, 62vw" alt="Объёмная стрижка и колорирование" width="1332" height="2000" decoding="async" fetchpriority="high">
+            <img class="hero-img hero-img-secondary" data-depth="52" src="assets/img/hero-makeup.jpg?v=8" srcset="assets/img/hero-makeup.jpg?v=8 1157w" sizes="(min-width: 1100px) 300px, 44vw" alt="Укладка и образ в студии" width="1157" height="1400" decoding="async">
+            <img class="hero-img hero-img-accent" data-depth="68" src="assets/img/hero-hair.jpg?v=7" srcset="assets/img/hero-hair.jpg?v=7 1253w" sizes="(min-width: 1100px) 260px, 38vw" alt="Визажист за работой" width="1253" height="1920" decoding="async">
+          </div>
+        </div>
+      </div>
+      <div class="hero-contact-bar reveal" data-delay="2">
+        <div class="container contact-bar-inner">
+          <a href="tel:+74951234567" class="contact-pill">
+            <span class="contact-pill-label">Телефон</span>
+            <span>+7 (495) 123-45-67</span>
+            <span class="contact-pill-note">10:00–22:00 · без выходных</span>
+          </a>
+          <div class="contact-pill contact-pill-address">
+            <span class="contact-pill-label">Адрес</span>
+            <span>ул. Променад, 8</span>
+            <span class="contact-pill-note">этаж 2 · вход с лобби</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-salon reveal" id="about-salon">
+      <div class="container">
+        <p class="home-kicker">Салон красоты</p>
+        <h2 class="home-display">PLATINA — пространство для образа,<br>в котором важна каждая деталь</h2>
+      </div>
+    </section>
+
+    <section class="section home-section" id="offers">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Акции</p>
+          <h2 class="section-title">Уникальные <span class="accent">предложения</span></h2>
+        </header>
+        <div class="promo-grid home-promo">
+          <article class="promo-card promo-card-featured reveal">
+            <span class="promo-badge">−15%</span>
+            <h3>Новым гостям</h3>
+            <p>Первый визит к любому мастеру при онлайн-записи.</p>
+            <a href="contact.html" class="btn btn-primary">Записаться со скидкой</a>
+          </article>
+          <article class="promo-card reveal" data-delay="1">
+            <h3>Дуэт beauty</h3>
+            <p>Маникюр + укладка в один день — <strong>6&nbsp;900 ₽</strong></p>
+            <a href="contact.html" class="home-link">Записаться →</a>
+          </article>
+          <article class="promo-card reveal" data-delay="2">
+            <h3>Утро в PLATINA</h3>
+            <p>Пн–Чт до 13:00 — уход для волос <strong>−10%</strong></p>
+            <a href="contact.html" class="home-link">Записаться →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-tone" id="services">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Меню</p>
+          <h2 class="section-title">Услуги <span class="accent">салона</span></h2>
+        </header>
+        <div class="home-services">
+          <a class="home-service reveal" href="service-cutting.html">
+            <img src="assets/img/svc-hair.jpg?v=6" alt="Укладка и окрашивание волос" loading="lazy">
+            <div><h3>Волосы</h3><p>от 4&nbsp;500 ₽</p></div>
+          </a>
+          <a class="home-service reveal" data-delay="1" href="service-nails.html">
+            <img src="assets/img/svc-nails.jpg?v=4" alt="Маникюр и педикюр" loading="lazy">
+            <div><h3>Ногтевой сервис</h3><p>от 2&nbsp;800 ₽</p></div>
+          </a>
+          <a class="home-service reveal" data-delay="2" href="service-makeup.html">
+            <img src="assets/img/svc-makeup.webp?v=1" alt="Макияж и брови" loading="lazy">
+            <div><h3>Макияж и брови</h3><p>от 3&nbsp;200 ₽</p></div>
+          </a>
+          <a class="home-service reveal" data-delay="3" href="contact.html">
+            <img src="assets/img/svc-cosmo.jpg?v=3" alt="Косметология" loading="lazy">
+            <div><h3>Косметология</h3><p>от 5&nbsp;500 ₽</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section" id="works">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Портфолио</p>
+          <h2 class="section-title">Наши <span class="accent">работы</span></h2>
+        </header>
+        <div class="home-works home-works-four reveal">
+          <img src="assets/img/work-1.jpg?v=5" alt="Светлый хвост с аккуратным узлом" loading="lazy">
+          <img src="assets/img/work-2.jpg?v=6" alt="Слоистая стрижка боб с чёлкой" loading="lazy">
+          <img src="assets/img/work-3.jpg?v=5" alt="Вечерний образ с гладким пучком" loading="lazy">
+          <img src="assets/img/work-4.jpg?v=5" alt="Вечерний макияж и укладка" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-tone" id="team">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Специалисты</p>
+          <h2 class="section-title">Наша <span class="accent">команда</span></h2>
+        </header>
+        <div class="stylist-section reveal">
+          <h3 class="stylist-section__title">Стилисты</h3>
+          <ul class="stylist-avatars" aria-label="Стилисты PLATINA">
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/stylist-1.jpg?v=2" alt="Ксения М." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Ксения М.</span>
+                <span class="stylist-avatar__role">Стилист</span>
+              </a>
+            </li>
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/stylist-2.jpg?v=2" alt="Диана Р." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Диана Р.</span>
+                <span class="stylist-avatar__role">Стилист</span>
+              </a>
+            </li>
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/stylist-3.jpg?v=2" alt="Ольга Л." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Ольга Л.</span>
+                <span class="stylist-avatar__role">Топ-стилист</span>
+              </a>
+            </li>
+          <li class="stylist-avatar-card">
+            <a href="contact.html">
+              <img class="stylist-avatar" src="assets/img/stylist-4.jpg?v=2" alt="Виктория Н." width="100" height="100" loading="lazy">
+              <span class="stylist-avatar__name">Виктория Н.</span>
+              <span class="stylist-avatar__role">Стилист</span>
+            </a>
+          </li>
+          <li class="stylist-avatar-card">
+            <a href="contact.html">
+              <img class="stylist-avatar" src="assets/img/stylist-6.jpg?v=2" alt="Артём Ч." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Артём Ч.</span>
+                <span class="stylist-avatar__role">Мужской стилист</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="stylist-section reveal" data-delay="1" style="margin-top:2.5rem">
+          <h3 class="stylist-section__title">Визажисты</h3>
+          <ul class="stylist-avatars" aria-label="Визажисты PLATINA">
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/visagist-1.jpg?v=1" alt="Мария К." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Мария К.</span>
+                <span class="stylist-avatar__role">Визажист</span>
+              </a>
+            </li>
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/visagist-2.jpg?v=1" alt="Дарья С." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Дарья С.</span>
+                <span class="stylist-avatar__role">Визажист</span>
+              </a>
+            </li>
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/visagist-3.jpg?v=1" alt="Екатерина В." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Екатерина В.</span>
+                <span class="stylist-avatar__role">Топ-визажист</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="stylist-section reveal" data-delay="2" style="margin-top:2.5rem">
+          <h3 class="stylist-section__title">Ногтевой сервис</h3>
+          <ul class="stylist-avatars" aria-label="Мастера ногтевого сервиса">
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/nail-master-1.jpg?v=1" alt="Полина А." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Полина А.</span>
+                <span class="stylist-avatar__role">Мастер маникюра</span>
+              </a>
+            </li>
+            <li class="stylist-avatar-card">
+              <a href="contact.html">
+                <img class="stylist-avatar" src="assets/img/nail-master-2.jpg?v=1" alt="Ирина К." width="100" height="100" loading="lazy">
+                <span class="stylist-avatar__name">Ирина К.</span>
+                <span class="stylist-avatar__role">Мастер педикюра</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section" id="loyalty">
+      <div class="container loyalty-grid reveal">
+        <div>
+          <p class="eyebrow">Бонусы</p>
+          <h2 class="section-title">Программа <span class="accent">лояльности</span></h2>
+          <p class="section-desc">Копите баллы за каждый визит — обменивайте на услуги и подарочные минуты ухода.</p>
+          <ul class="loyalty-list">
+            <li><strong>5%</strong> кэшбэк баллами с чека</li>
+            <li><strong>×2 баллы</strong> в день рождения</li>
+            <li><strong>Подарок</strong> после 10 визитов</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Подключить карту</a>
+        </div>
+        <div class="loyalty-card loyalty-blob" aria-hidden="true">
+          <svg class="loyalty-blob__svg" viewBox="0 0 420 360" aria-hidden="true">
+            <defs>
+              <linearGradient id="platina-blob-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#45f0ff"/>
+                <stop offset="40%" stop-color="#5ba3d9"/>
+                <stop offset="72%" stop-color="#e891b0"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#platina-blob-fill)" d="M208 32c56-26 128 4 138 72s64 44 48 104-36 88-96 100-76 58-134 46-98-8-128-62 8-110 48-152 62-46 108-58 34-16 62-8z"/>
+            <path fill="url(#platina-blob-fill)" opacity=".88" d="M52 168c-18-22-8-48 10-58s28 6 22 26-24 38-32 32z"/>
+            <path fill="url(#platina-blob-fill)" opacity=".82" d="M352 156c24-12 40 8 32 32s-36 10-44-14 12-18 12-18z"/>
+            <ellipse cx="96" cy="312" rx="14" ry="18" fill="#5ba3d9" opacity=".95"/>
+            <ellipse cx="338" cy="278" rx="9" ry="11" fill="#e891b0" opacity=".9"/>
+            <circle cx="365" cy="118" r="7" fill="#45f0ff" opacity=".85"/>
+          </svg>
+          <div class="loyalty-blob__text">
+            <span>PLATINA</span>
+            <strong>Loyalty</strong>
+            <em>beauty club</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-tone" id="reviews">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Отзывы</p>
+          <h2 class="section-title">Клиенты <span class="accent">о нас</span></h2>
+        </header>
+        <div class="reviews-grid">
+          <blockquote class="review-card reveal">
+            <div class="review-stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Укладка держится три дня, мастер не торопит. Интерьер — как в хорошем отеле.»</p>
+            <footer>— Анна</footer>
+          </blockquote>
+          <blockquote class="review-card reveal" data-delay="1">
+            <div class="review-stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Вечерний макияж для съёмки — идеально под свет. Вернулась на коррекцию бровей.»</p>
+            <footer>— Дарья</footer>
+          </blockquote>
+          <blockquote class="review-card reveal" data-delay="2">
+            <div class="review-stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Косметология без агрессии: объяснили протокол, кожа спокойная. Баллы реально экономят.»</p>
+            <footer>— Ольга</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-cta reveal">
+      <div class="container home-cta-inner">
+        <h2 class="section-title">Записаться в <span class="accent">PLATINA</span></h2>
+        <a href="contact.html" class="btn btn-primary btn-lg">Онлайн-запись</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer-premium">
+    <div class="container">
+      <div class="footer-premium__grid">
+        <div>
+          <p class="footer-premium__brand">PLATINA</p>
+          <p class="footer-premium__tagline">Премиальная студия красоты. Волосы, макияж, nail-сервис и уход в центре Москвы.</p>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Студия</h4>
+          <a href="about.html">О студии</a>
+          <a href="masters.html">Специалисты</a>
+          <a href="portfolio.html">Портфолио</a>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Гостям</h4>
+          <a href="offers.html">Акции</a>
+          <a href="prices.html">Цены</a>
+          <a href="faq.html">Вопросы и ответы</a>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Запись</h4>
+          <a href="contact.html">Онлайн</a>
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+          <a href="loyalty.html">Лояльность</a>
+        </div>
+      </div>
+      <div class="footer-premium__bottom">
+        <p>© <span id="year"></span> PLATINA</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

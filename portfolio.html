@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио — PLATINA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="persona.css">
+  <link rel="stylesheet" href="premium.css">
+</head>
+<body class="page-sub">
+  <header class="header is-scrolled">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="service-cutting.html">Стрижка волос</a>
+            <a role="menuitem" href="service-coloring.html">Окрашивание волос</a>
+            <a role="menuitem" href="service-styling.html">Укладка волос</a>
+            <a role="menuitem" href="service-hair-care.html">Уход за волосами</a>
+            <a role="menuitem" href="service-nails.html">Маникюр и педикюр</a>
+            <a role="menuitem" href="service-makeup.html">Макияж, брови и ресницы</a>
+            <a role="menuitem" href="service-instant-tan.html">Моментальный загар</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Портфолио</p>
+        <h1 class="persona-page-title">Наши <span class="accent">работы</span></h1>
+        <p class="page-hero-lead">Образы студии: стрижки, колор, укладки, макияж и nail-art. Смотрите работы по направлениям.</p>
+        <div class="portfolio-toolbar">
+          <button type="button" class="portfolio-filter is-active" data-portfolio-filter="all">Все</button>
+          <button type="button" class="portfolio-filter" data-portfolio-filter="hair">Волосы</button>
+          <button type="button" class="portfolio-filter" data-portfolio-filter="makeup">Макияж</button>
+          <button type="button" class="portfolio-filter" data-portfolio-filter="color">Колор</button>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="container portfolio-masonry reveal">
+        <figure class="pf-span-6" data-portfolio-item="hair"><img src="assets/img/work-1.jpg?v=5" alt="Светлый хвост с аккуратным узлом" loading="lazy"></figure>
+        <figure class="pf-span-6 pf-tall" data-portfolio-item="hair"><img src="assets/img/work-2.jpg?v=6" alt="Слоистая стрижка боб с чёлкой" loading="lazy"></figure>
+        <figure class="pf-span-8" data-portfolio-item="makeup"><img src="assets/img/work-3.jpg?v=5" alt="Вечерний образ с гладким пучком" loading="lazy"></figure>
+        <figure class="pf-span-4" data-portfolio-item="makeup"><img src="assets/img/work-4.jpg?v=5" alt="Вечерний макияж и укладка" loading="lazy"></figure>
+      </div>
+    </section>
+    <section class="page-cta">
+      <div class="container page-cta-inner reveal">
+        <div>
+          <h2 class="section-title">Хотите такой <span class="accent">образ</span>?</h2>
+          <p>Запишитесь к стилисту или визажисту — подберём услугу под ваш тип внешности.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-lg">Записаться</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">PLATINA</p>
+      <p class="footer-copy">© <span id="year"></span> · студия красоты</p>
+      <a href="index.html" class="footer-top">На главную</a>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script src="js/portfolio-filter.js"></script>
+</body>
+</html>

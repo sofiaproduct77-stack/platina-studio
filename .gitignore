@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+*.log
+npm-debug.log*
+Thumbs.db
+Desktop.ini
+.DS_Store
+assets/img/**/*.tmp

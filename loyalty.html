@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лояльность — PLATINA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="premium.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body class="page-sub">
+  <header class="header is-scrolled">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="service-cutting.html">Стрижка волос</a>
+            <a role="menuitem" href="service-coloring.html">Окрашивание волос</a>
+            <a role="menuitem" href="service-styling.html">Укладка волос</a>
+            <a role="menuitem" href="service-hair-care.html">Уход за волосами</a>
+            <a role="menuitem" href="service-nails.html">Маникюр и педикюр</a>
+            <a role="menuitem" href="service-makeup.html">Макияж, брови и ресницы</a>
+            <a role="menuitem" href="service-instant-tan.html">Моментальный загар</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <p class="eyebrow">Бонусы</p>
+        <h1 class="section-title">Программа <span class="accent">лояльности</span></h1>
+        <p class="page-hero-lead">Копите баллы за визиты и обменивайте их на услуги, уход и подарки в студии.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container loyalty-grid reveal">
+        <div>
+          <p class="section-desc">Карта действует на все услуги меню. Баллы начисляются автоматически после оплаты.</p>
+          <ul class="loyalty-list">
+            <li><strong>5%</strong> кэшбэк баллами с чека</li>
+            <li><strong>×2 баллы</strong> в день рождения</li>
+            <li><strong>Подарок</strong> после 10 визитов</li>
+            <li><strong>Бесплатная</strong> консультация косметолога раз в квартал</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Подключить карту</a>
+        </div>
+        <div class="loyalty-card loyalty-blob" aria-hidden="true">
+          <svg class="loyalty-blob__svg" viewBox="0 0 420 360" aria-hidden="true">
+            <defs>
+              <linearGradient id="platina-blob-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#45f0ff"/>
+                <stop offset="40%" stop-color="#5ba3d9"/>
+                <stop offset="72%" stop-color="#e891b0"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#platina-blob-fill)" d="M208 32c56-26 128 4 138 72s64 44 48 104-36 88-96 100-76 58-134 46-98-8-128-62 8-110 48-152 62-46 108-58 34-16 62-8z"/>
+            <path fill="url(#platina-blob-fill)" opacity=".88" d="M52 168c-18-22-8-48 10-58s28 6 22 26-24 38-32 32z"/>
+            <path fill="url(#platina-blob-fill)" opacity=".82" d="M352 156c24-12 40 8 32 32s-36 10-44-14 12-18 12-18z"/>
+            <ellipse cx="96" cy="312" rx="14" ry="18" fill="#5ba3d9" opacity=".95"/>
+            <ellipse cx="338" cy="278" rx="9" ry="11" fill="#e891b0" opacity=".9"/>
+            <circle cx="365" cy="118" r="7" fill="#45f0ff" opacity=".85"/>
+          </svg>
+          <div class="loyalty-blob__text">
+            <span>PLATINA</span>
+            <strong>Loyalty</strong>
+            <em>beauty club</em>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-cta">
+      <div class="container page-cta-inner reveal">
+        <div>
+          <h2 class="section-title">Уже были <span class="accent">у нас</span>?</h2>
+          <p>Администратор привяжет прошлые визиты к карте при первом подключении.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-lg">Оформить карту</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">PLATINA</p>
+      <p class="footer-copy">© <span id="year"></span> · студия красоты</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

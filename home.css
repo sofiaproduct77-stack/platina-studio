@@ -1,0 +1,394 @@
+/* Главная — темнее базовой светлой темы, блоки как у Persona */
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+.page-home {
+  --bg: #d8e1ec;
+  --bg-muted: #c9d4e2;
+  --bg-card: #e8eef5;
+  --bg-elevated: #ccd8e6;
+  --line: rgba(72, 108, 148, 0.28);
+  background: var(--bg);
+}
+
+.page-home .header {
+  background: rgba(216, 225, 236, 0.88);
+}
+
+.page-home .nav-persona {
+  gap: 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.page-home .nav-persona a:not(.nav-cta),
+.page-home .nav-persona .nav-dropdown__trigger {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.page-home .nav-persona .nav-cta {
+  font-size: 0.95rem;
+  padding: 0.72rem 1.5rem;
+}
+
+@media (min-width: 1100px) {
+  .page-home .nav-persona {
+    gap: 1.65rem;
+  }
+
+  .page-home .nav-persona a:not(.nav-cta),
+  .page-home .nav-persona .nav-dropdown__trigger {
+    font-size: 1.05rem;
+  }
+
+  .page-home .logo-text {
+    font-size: 1.14rem;
+  }
+}
+
+.page-home .header.is-scrolled {
+  background: rgba(200, 212, 226, 0.96);
+  box-shadow: 0 10px 40px rgba(60, 90, 130, 0.12);
+}
+
+.page-home .hero {
+  background:
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(91, 163, 217, 0.2), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(232, 145, 176, 0.18), transparent 50%),
+    linear-gradient(165deg, #cfd9e6 0%, #d8e1ec 45%, #e2d5e0 100%);
+}
+
+.page-home .home-works img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft, 0 16px 40px rgba(42, 61, 82, 0.1));
+}
+
+.page-home .review-card {
+  box-shadow: 0 20px 48px rgba(42, 61, 82, 0.08);
+}
+
+.page-home .hero-title-main.hero-title-shine {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  background: linear-gradient(
+    100deg,
+    #2f6fa8 0%,
+    #5ba3d9 18%,
+    #e891b0 36%,
+    #ffffff 50%,
+    #7bc0eb 64%,
+    #e891b0 82%,
+    #2f6fa8 100%
+  );
+  background-size: 320% 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: platina-shine 5.5s ease-in-out infinite;
+  will-change: background-position;
+}
+
+@keyframes platina-shine {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-home .hero-title-main.hero-title-shine {
+    animation: none;
+    background-position: 50% 50%;
+    -webkit-text-fill-color: #2a3d52;
+    color: #2a3d52;
+  }
+}
+
+.home-salon {
+  padding: 3.5rem 0 2rem;
+  text-align: center;
+}
+
+.home-kicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.home-display {
+  margin: 0 auto;
+  max-width: 20ch;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.home-section {
+  padding: 4.5rem 0;
+}
+
+.home-section-tone {
+  background: var(--bg-muted);
+}
+
+.home-promo .promo-card {
+  background: var(--bg-card);
+}
+
+.home-more {
+  margin: 1.5rem 0 0;
+  text-align: center;
+}
+
+.home-more a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-more a:hover {
+  color: var(--pink);
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: var(--pink);
+}
+
+.home-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.home-service {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s;
+}
+
+.home-service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(60, 90, 130, 0.15);
+}
+
+.home-service img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.page-home .hero-img {
+  filter: saturate(1.03) contrast(1.02);
+}
+
+.home-service div {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.home-service h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.home-service p {
+  margin: 0.35rem 0 0;
+  color: var(--pink);
+  font-weight: 700;
+}
+
+.home-hub {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.home-hub a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.35s;
+}
+
+.home-hub a:hover {
+  transform: translateY(-3px);
+  border-color: var(--pink);
+  box-shadow: 0 14px 36px rgba(60, 90, 130, 0.12);
+}
+
+.home-hub span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.home-hub strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.home-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.home-works-eight,
+.home-works-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.home-works-five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1100px) {
+  .home-works-five {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-works-five {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.home-works img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 32px rgba(60, 90, 130, 0.14);
+}
+
+.home-team .team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 0 1.25rem;
+}
+
+.loyalty-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.loyalty-list {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+}
+
+.loyalty-list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.review-card {
+  margin: 0;
+  padding: 1.35rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+}
+
+.review-stars {
+  color: #e8b84a;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.65rem;
+}
+
+.review-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.review-card footer {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.home-cta {
+  padding: 4rem 0 5rem;
+  background: linear-gradient(135deg, #b8c9dc, #d4b8c8);
+}
+
+.home-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .home-services,
+  .reviews-grid,
+  .loyalty-grid,
+  .home-hub {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-works,
+  .home-works-eight {
+    grid-template-columns: 1fr 1fr;
+  }
+}

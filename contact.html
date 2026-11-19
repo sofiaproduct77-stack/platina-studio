@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн-запись — PLATINA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="premium.css">
+</head>
+<body class="page-sub page-booking">
+  <header class="header is-scrolled">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="service-cutting.html">Стрижка волос</a>
+            <a role="menuitem" href="service-coloring.html">Окрашивание волос</a>
+            <a role="menuitem" href="service-styling.html">Укладка волос</a>
+            <a role="menuitem" href="service-hair-care.html">Уход за волосами</a>
+            <a role="menuitem" href="service-nails.html">Маникюр и педикюр</a>
+            <a role="menuitem" href="service-makeup.html">Макияж, брови и ресницы</a>
+            <a role="menuitem" href="service-instant-tan.html">Моментальный загар</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="content-hero">
+      <div class="container reveal">
+        <p class="eyebrow">Запись</p>
+        <h1 class="persona-page-title">Онлайн <span class="accent">бронирование</span></h1>
+        <p class="page-hero-lead">Четыре шага — выберите услугу, мастера, удобное время и оставьте контакты. Администратор подтвердит визит в течение 15 минут.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="container booking-shell reveal" data-delay="1">
+        <div class="booking-progress" aria-hidden="true">
+          <span class="booking-progress__step is-current" data-progress-step></span>
+          <span class="booking-progress__step" data-progress-step></span>
+          <span class="booking-progress__step" data-progress-step></span>
+          <span class="booking-progress__step" data-progress-step></span>
+          <span class="booking-progress__step" data-progress-step></span>
+        </div>
+        <div class="booking-panel" data-booking-wizard>
+          <div class="booking-step is-active" data-booking-step="service">
+            <h2>Услуга</h2>
+            <p class="step-hint">Выберите направление — цену уточним при подтверждении.</p>
+            <div class="booking-service-grid">
+              <button type="button" class="booking-pick" data-pick-service="cutting"><strong>Стрижка</strong><span>от 3 200 ₽</span></button>
+              <button type="button" class="booking-pick" data-pick-service="coloring"><strong>Окрашивание</strong><span>от 4 500 ₽</span></button>
+              <button type="button" class="booking-pick" data-pick-service="styling"><strong>Укладка</strong><span>от 2 400 ₽</span></button>
+              <button type="button" class="booking-pick" data-pick-service="care"><strong>Уход за волосами</strong><span>от 3 500 ₽</span></button>
+              <button type="button" class="booking-pick" data-pick-service="nails"><strong>Nail-сервис</strong><span>от 2 800 ₽</span></button>
+              <button type="button" class="booking-pick" data-pick-service="makeup"><strong>Макияж / брови</strong><span>от 3 200 ₽</span></button>
+            </div>
+          </div>
+          <div class="booking-step" data-booking-step="master">
+            <h2>Специалист</h2>
+            <p class="step-hint">Можно пропустить — подберём лучшего свободного мастера.</p>
+            <div class="booking-master-row">
+              <button type="button" class="booking-master" data-pick-master="Любой мастер"><span>★</span><small>Любой</small></button>
+              <button type="button" class="booking-master" data-pick-master="Ксения М."><img src="assets/img/stylist-1.jpg?v=2" alt="" width="56" height="56" loading="lazy"><small>Ксения М.</small></button>
+              <button type="button" class="booking-master" data-pick-master="Ольга Л."><img src="assets/img/stylist-3.jpg?v=2" alt="" width="56" height="56" loading="lazy"><small>Ольга Л.</small></button>
+              <button type="button" class="booking-master" data-pick-master="Мария К."><img src="assets/img/visagist-1.jpg?v=1" alt="" width="56" height="56" loading="lazy"><small>Мария К.</small></button>
+              <button type="button" class="booking-master" data-pick-master="Полина А."><img src="assets/img/nail-master-1.jpg?v=1" alt="" width="56" height="56" loading="lazy"><small>Полина А.</small></button>
+            </div>
+          </div>
+          <div class="booking-step" data-booking-step="datetime">
+            <h2>Дата и время</h2>
+            <p class="step-hint">Слоты — примерные. Точное время согласуем по телефону.</p>
+            <div class="booking-field">
+              <label for="book-date">Дата визита</label>
+              <input type="date" id="book-date" name="date" required>
+            </div>
+            <div class="booking-field">
+              <label>Время</label>
+              <div class="booking-slots">
+                <button type="button" class="booking-slot" data-pick-slot="10:00">10:00</button>
+                <button type="button" class="booking-slot" data-pick-slot="12:00">12:00</button>
+                <button type="button" class="booking-slot" data-pick-slot="14:00">14:00</button>
+                <button type="button" class="booking-slot" data-pick-slot="16:00">16:00</button>
+                <button type="button" class="booking-slot" data-pick-slot="18:00">18:00</button>
+                <button type="button" class="booking-slot" data-pick-slot="20:00">20:00</button>
+              </div>
+            </div>
+          </div>
+          <div class="booking-step" data-booking-step="contact">
+            <h2>Контакты</h2>
+            <p class="step-hint">Как к вам обращаться и куда перезвонить.</p>
+            <form data-booking-form>
+              <div class="booking-field">
+                <label for="book-name">Имя</label>
+                <input type="text" id="book-name" name="name" autocomplete="name" placeholder="Анна">
+                <p class="booking-error" data-error-name>Укажите имя (минимум 2 символа)</p>
+              </div>
+              <div class="booking-field">
+                <label for="book-phone">Телефон</label>
+                <input type="tel" id="book-phone" name="phone" autocomplete="tel" placeholder="+7 (900) 000-00-00">
+                <p class="booking-error" data-error-phone>Введите корректный номер телефона</p>
+              </div>
+              <div class="booking-field">
+                <label for="book-comment">Комментарий</label>
+                <textarea id="book-comment" name="comment" rows="3" placeholder="Пожелания по образу, аллергии…"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="booking-step" data-booking-step="success">
+            <div class="booking-success">
+              <div class="booking-success__icon" aria-hidden="true">✓</div>
+              <h2>Заявка принята</h2>
+              <div data-booking-summary class="step-hint"></div>
+              <a href="index.html" class="btn btn-primary" style="margin-top:1.5rem">На главную</a>
+            </div>
+          </div>
+          <div class="booking-actions">
+            <button type="button" class="btn btn-ghost" data-booking-back hidden>Назад</button>
+            <button type="button" class="btn btn-primary" data-booking-next>Далее</button>
+            <button type="button" class="btn btn-primary" data-booking-submit hidden>Отправить заявку</button>
+          </div>
+        </div>
+        <aside class="reveal" style="margin-top:2rem;text-align:center" data-delay="2">
+          <p class="section-desc">или звоните <a href="tel:+74951234567">+7 (495) 123-45-67</a> · ул. Променад, 8 · 10:00–22:00</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-premium">
+    <div class="container">
+      <div class="footer-premium__grid">
+        <div>
+          <p class="footer-premium__brand">PLATINA</p>
+          <p class="footer-premium__tagline">Премиальная студия красоты. Волосы, макияж, nail-сервис и уход в центре Москвы.</p>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Студия</h4>
+          <a href="about.html">О студии</a>
+          <a href="masters.html">Специалисты</a>
+          <a href="portfolio.html">Портфолио</a>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Гостям</h4>
+          <a href="offers.html">Акции</a>
+          <a href="prices.html">Цены</a>
+          <a href="faq.html">Вопросы и ответы</a>
+        </div>
+        <div class="footer-premium__col">
+          <h4>Запись</h4>
+          <a href="contact.html">Онлайн</a>
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+          <a href="loyalty.html">Лояльность</a>
+        </div>
+      </div>
+      <div class="footer-premium__bottom">
+        <p>© <span id="year"></span> PLATINA</p>
+        <a href="index.html">На главную</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

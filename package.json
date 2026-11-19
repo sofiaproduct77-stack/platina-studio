@@ -1,0 +1,20 @@
+{
+  "name": "platina-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PLATINA — премиальная студия красоты",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "enhance:images": "node scripts/enhance-all.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

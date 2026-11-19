@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопросы и ответы — PLATINA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="premium.css">
+</head>
+<body class="page-sub">
+  <header class="header is-scrolled">
+    <div class="header-inner container">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">PLATINA</span></a>
+      <nav class="nav nav-persona" id="nav-menu">
+        <a href="about.html">О студии</a>
+        <a href="certificates.html">Сертификаты</a>
+        <a href="offers.html">Акции</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="masters.html">Специалисты</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-services-menu">Услуги</button>
+          <div class="nav-dropdown__panel" id="nav-services-menu" role="menu">
+            <a role="menuitem" href="services.html">Все услуги</a>
+          </div>
+        </div>
+        <a href="loyalty.html">Лояльность</a>
+        <a href="contact.html" class="nav-cta">Запись</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="content-hero reveal">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h1 class="persona-page-title">Частые <span class="accent">вопросы</span></h1>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container faq-list reveal">
+        <details class="faq-item"><summary>Как записаться онлайн?</summary><p>На странице «Запись» выберите услугу, мастера, дату и оставьте телефон. Мы перезвоним в течение 15 минут для подтверждения.</p></details>
+        <details class="faq-item"><summary>Можно ли перенести или отменить визит?</summary><p>Да, бесплатно за 4 часа до назначенного времени. Поздняя отмена может учитываться при повторной записи к топ-мастерам.</p></details>
+        <details class="faq-item"><summary>Суммируются ли акции?</summary><p>Как правило, нет. Актуальные условия указаны на странице «Акции» и уточняются администратором.</p></details>
+        <details class="faq-item"><summary>Какие бренды используете?</summary><p>Kérastase, L’Oréal Professionnel, IS Clinical, подобранные линейки для nail-сервиса и стойких красителей в колористике.</p></details>
+        <details class="faq-item"><summary>Есть ли парковка?</summary><p>Гостевые места у ТЦ уточняйте у администрации. Ближайшее метро — в 7 минутах пешком.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-premium"><div class="container"><div class="footer-premium__bottom"><p>© <span id="year"></span> PLATINA</p><a href="contact.html">Запись</a></div></div></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
